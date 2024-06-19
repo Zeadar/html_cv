@@ -10,21 +10,12 @@ ul {
 }
 
 :root {
-  --title-height: 6rem;
   --sideInfo-width: 20rem;
   --mainBody-width: 37rem;
 }
 
 #title {
-  position: fixed;
-  height: var(--title-height);
-  top: 0px;
-  width: 50rem;
-  /* Min width to fit my full name in one line */
-  min-width: 80rem;
-  display: flex;
-  justify-content: center;
-  background-color: white;
+  position: relative;
 
   font-family: "Arbutus", serif;
   font-weight: 400;
@@ -34,12 +25,12 @@ ul {
 
 #cv {
   position: absolute;
-  top: 0px;
-  right: 0px;
   font-family: "Quattrocento", serif;
   font-weight: 700;
   font-style: normal;
   font-size: 2rem;
+  bottom: -1rem;
+  right: 0px;
 }
 
 #ego {
@@ -52,11 +43,12 @@ ul {
 
 #mainContainer {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 #subContainer {
-  margin-top: var(--title-height);
+  position: relative;
   display: flex;
 }
 
@@ -76,12 +68,15 @@ ul {
 
 /* 3 rem wide */
 #verticalLine {
-  height: 100%;
-  width: 0.4rem;
+  position: relative;
+  /* height: 100vh; */
+  /* width: 0.4rem; */
+  width: 0.2rem;
+
   background-color: black;
-  border-radius: 20%;
-  margin-left: 1.3rem;
-  margin-right: 1.3rem;
+  /* border-radius: 20%; */
+  margin-left: 1.9rem;
+  margin-right: 1.9rem;
 }
 
 .sideInfoTitle {
