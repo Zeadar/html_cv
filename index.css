@@ -66,6 +66,18 @@ ul {
     width: 100%;
 }
 
+@media (min-width: 769px) {
+    #mainContainer {
+        align-items: center;
+    }
+
+    #subContainer {
+        margin-left: auto;
+        margin-right: auto;
+        width: fit-content;
+    }
+}
+
 #sideInfo {
     width: var(--sideInfo-width);
     padding: 0.2rem;
