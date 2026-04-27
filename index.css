@@ -2,7 +2,20 @@
 
 html {
     /* rem relative property */
-    font-size: 14px;
+    font-size: 0.875rem;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 1rem;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 ul {
@@ -34,7 +47,7 @@ ul {
 }
 
 #ego {
-    width: 100%;
+    width: 280px;
     height: auto;
     aspect-ratio: 1;
     object-fit: cover;
@@ -50,6 +63,7 @@ ul {
 #subContainer {
     position: relative;
     display: flex;
+    width: 100%;
 }
 
 #sideInfo {
@@ -112,4 +126,59 @@ ul {
     font-weight: 400;
     font-style: normal;
     font-size: 1.4rem;
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 1rem;
+    }
+
+    #mainContainer {
+        align-items: center;
+    }
+
+    #subContainer {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    #sideInfo,
+    #mainBody {
+        width: min(100%, 42rem);
+        padding-right: 0.2rem;
+        padding-left: 0.2rem;
+    }
+
+    #verticalLine {
+        display: none;
+    }
+
+    #title {
+        font-size: 2.5rem;
+    }
+
+    #cv {
+        position: static;
+        margin-top: 0.3rem;
+    }
+
+    #title,
+    #sideInfo,
+    #mainBody {
+        text-align: center;
+    }
+
+    #ego {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    body {
+        line-height: 1.5;
+    }
+
+    a {
+        word-break: break-word;
+    }
 }
